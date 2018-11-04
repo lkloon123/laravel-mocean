@@ -1,0 +1,39 @@
+{
+    "name": "neoson/laravel-mocean",
+    "description": "Mocean API for Laravel",
+    "type": "library",
+    "keywords": ["sms","verify","laravel","mocean"],
+    "authors": [
+        {
+            "name": "NeoSon",
+            "email": "lkloon123@hotmail.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.5.0",
+        "laravel/framework": "5.*",
+        "mocean/client": "1.*"
+    },
+    "require-dev": {
+        "illuminate/console": "~4||~5",
+        "illuminate/support": "~4||~5",
+        "phpunit/phpunit": "~4.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "NeoSon\\Mocean\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NeoSon\\Mocean\\Laravel\\MoceanServiceProvider"
+            ],
+            "aliases": {
+                "Mocean": "NeoSon\\Mocean\\Laravel\\Facade"
+            }
+        }
+    }
+}
