@@ -28,7 +28,7 @@ return [
                 |
                 */
 
-                'key' => getenv('MOCEAN_API_KEY') ?: '',
+                'MOCEAN_API_KEY' => getenv('MOCEAN_API_KEY') ?: '',
 
                 /*
                 |--------------------------------------------------------------------------
@@ -39,7 +39,7 @@ return [
                 |
                 */
 
-                'secret' => getenv('MOCEAN_API_SECRET') ?: '',
+                'MOCEAN_API_SECRET' => getenv('MOCEAN_API_SECRET') ?: '',
 
                 /*
                 |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
                 |
                 */
 
-                'from' => getenv('MOCEAN_FROM') ?: '',
+                'MOCEAN_FROM' => getenv('MOCEAN_FROM') ?: '',
             ],
         ],
     ],
