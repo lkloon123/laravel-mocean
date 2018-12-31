@@ -1,6 +1,9 @@
 Laravel Mocean
 ===============
-Laravel Mocean API Integration
+[![Latest Stable Version](https://poser.pugx.org/neoson/laravel-mocean/v/stable)](https://packagist.org/packages/neoson/laravel-mocean)
+[![Build Status](https://travis-ci.com/lkloon123/laravel-mocean.svg?branch=master)](https://travis-ci.com/lkloon123/laravel-mocean)
+[![License](https://poser.pugx.org/neoson/laravel-mocean/license)](https://packagist.org/packages/neoson/laravel-mocean)
+[![Total Downloads](https://poser.pugx.org/neoson/laravel-mocean/downloads)](https://packagist.org/packages/neoson/laravel-mocean)
 
 ## Installation
 
@@ -37,6 +40,10 @@ php artisan vendor:publish --provider="NeoSon\Mocean\Laravel\MoceanServiceProvid
 
 Creating a Mocean object
 ```php
+//use configured mocean setting
+$mocean = app('mocean');
+
+//custom setting
 $mocean = new NeoSon\Mocean\Mocean($apiKey, $apiSecret, $from);
 ```
 
@@ -50,6 +57,12 @@ Get the configured [Mocean SDK](https://github.com/MoceanAPI/mocean-sdk-php) Obj
 $sdk = $mocean->getMocean();
 ```
 
+If you have multiple account defined in config
+```php
+$mocean->using('second_account')->message('60123456789', 'Simple Text');
+$mocean->using('third_account')->message('60123456789', 'Simple Text');
+```
+
 ### Using Facade
 
 Facade auto configured using the config file, make sure u publish the config file.
@@ -59,16 +72,8 @@ Include this facade
 use Mocean;
 ```
 
-Send a text message
-```php
-Mocean::message('60123456789', 'Simple Text');
-```
-
-If you have multiple account defined in config
-```php
-Mocean::using('second_account')->message('60123456789', 'Simple Text');
-Mocean::using('third_account')->message('60123456789', 'Simple Text');
-```
+then u can have can statically call all function defined in \NeoSon\Mocean\MoceanInterface.
+Look [Usage](#usage) for more usage info.
 
 ## License
 
