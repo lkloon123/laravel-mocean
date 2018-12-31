@@ -63,6 +63,8 @@ class Mocean implements MoceanInterface
     }
 
     /**
+     * Get the configured mocean sdk object
+     *
      * @return \Mocean\Client
      */
     public function getMocean()

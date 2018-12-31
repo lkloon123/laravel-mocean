@@ -1,9 +1,10 @@
 <?php
+
 namespace NeoSon\Mocean;
 
 use InvalidArgumentException;
 
-class Manager implements MoceanInterface
+class Manager
 {
     /**
      * @var string
@@ -38,18 +39,19 @@ class Manager implements MoceanInterface
 
         $settings = $this->settings[$account];
 
-        return new Mocean($settings['MOCEAN_API_KEY'], $settings['MOCEAN_API_SECRET'], $settings['MOCEAN_FROM']);
-    }
+        if (!isset($settings['MOCEAN_API_KEY']) || $settings['MOCEAN_API_KEY'] === '') {
+            throw new InvalidArgumentException('MOCEAN_API_KEY is not configured');
+        }
 
-    /**
-     * @param string $to
-     * @param string $message
-     *
-     * @return string
-     */
-    public function message($to, $message)
-    {
-        return call_user_func_array([$this->defaultConnection(), 'message'], func_get_args());
+        if (!isset($settings['MOCEAN_API_SECRET']) || $settings['MOCEAN_API_SECRET'] === '') {
+            throw new InvalidArgumentException('MOCEAN_API_SECRET is not configured');
+        }
+
+        if (!isset($settings['MOCEAN_FROM']) || $settings['MOCEAN_FROM'] === '') {
+            throw new InvalidArgumentException('MOCEAN_FROM is not configured');
+        }
+
+        return new Mocean($settings['MOCEAN_API_KEY'], $settings['MOCEAN_API_SECRET'], $settings['MOCEAN_FROM']);
     }
 
     /**
