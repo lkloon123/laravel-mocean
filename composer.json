@@ -13,16 +13,22 @@
     "require": {
         "php": ">=5.5.0",
         "laravel/framework": "5.*",
-        "mocean/client": "1.*"
+        "mocean/client": "1.0.*"
     },
     "require-dev": {
         "illuminate/console": "~4||~5",
         "illuminate/support": "~4||~5",
-        "phpunit/phpunit": "~4.5"
+        "phpunit/phpunit": "~4.5",
+        "orchestra/testbench": "~3.0"
     },
     "autoload": {
         "psr-4": {
             "NeoSon\\Mocean\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NeoSon\\Mocean\\Tests\\": "tests/"
         }
     },
     "minimum-stability": "stable",
