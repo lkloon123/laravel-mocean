@@ -72,7 +72,7 @@ Include this facade
 use Mocean;
 ```
 
-then u can have can statically call all function defined in \NeoSon\Mocean\MoceanInterface.
+then u can statically call all function defined in \NeoSon\Mocean\MoceanInterface.
 Look [Usage](#usage) for more usage info.
 
 ## License
