@@ -2,6 +2,7 @@ Laravel Mocean
 ===============
 [![Latest Stable Version](https://poser.pugx.org/neoson/laravel-mocean/v/stable)](https://packagist.org/packages/neoson/laravel-mocean)
 [![Build Status](https://travis-ci.com/lkloon123/laravel-mocean.svg?branch=master)](https://travis-ci.com/lkloon123/laravel-mocean)
+[![StyleCI](https://github.styleci.io/repos/156104998/shield?branch=master)](https://github.styleci.io/repos/156104998)
 [![License](https://poser.pugx.org/neoson/laravel-mocean/license)](https://packagist.org/packages/neoson/laravel-mocean)
 [![Total Downloads](https://poser.pugx.org/neoson/laravel-mocean/downloads)](https://packagist.org/packages/neoson/laravel-mocean)
 
