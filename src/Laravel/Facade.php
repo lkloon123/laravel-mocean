@@ -1,4 +1,5 @@
 <?php
+
 namespace NeoSon\Mocean\Laravel;
 
 use Illuminate\Support\Facades\Facade as BaseFacade;

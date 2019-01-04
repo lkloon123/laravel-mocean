@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: Neoson Lam
  * Date: 12/31/2018
- * Time: 11:01 AM
+ * Time: 11:01 AM.
  */
 
 namespace NeoSon\Mocean\Tests;
@@ -15,14 +15,14 @@ class AbstractTesting extends TestCase
     protected function getPackageProviders($app)
     {
         return [
-            \NeoSon\Mocean\Laravel\MoceanServiceProvider::class
+            \NeoSon\Mocean\Laravel\MoceanServiceProvider::class,
         ];
     }
 
     protected function getPackageAliases($app)
     {
         return [
-            'Mocean' => \NeoSon\Mocean\Laravel\Facade::class
+            'Mocean' => \NeoSon\Mocean\Laravel\Facade::class,
         ];
     }
 
@@ -36,6 +36,7 @@ class AbstractTesting extends TestCase
         $reflectionClass = new \ReflectionClass($class);
         $refProperty = $reflectionClass->getProperty($property);
         $refProperty->setAccessible(true);
+
         return $refProperty->getValue($object);
     }
 }

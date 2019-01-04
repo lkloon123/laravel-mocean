@@ -42,12 +42,13 @@ class Mocean implements MoceanInterface
     /**
      * @param string $to
      * @param string $text
-     * @param array $params
+     * @param array  $params
      *
      * @link http://moceanapi.com/docs/#send-sms Documentation
      *
-     * @return string
      * @throws Client\Exception\Exception
+     *
+     * @return string
      */
     public function message($to, $text, array $params = [])
     {
@@ -63,7 +64,7 @@ class Mocean implements MoceanInterface
     }
 
     /**
-     * Get the configured mocean sdk object
+     * Get the configured mocean sdk object.
      *
      * @return \Mocean\Client
      */

@@ -3,11 +3,10 @@
  * Created by PhpStorm.
  * User: Neoson Lam
  * Date: 12/31/2018
- * Time: 11:29 AM
+ * Time: 11:29 AM.
  */
 
 namespace NeoSon\Mocean\Tests;
-
 
 class TestNoConfiguration extends AbstractTesting
 {
