@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: Neoson Lam
  * Date: 12/31/2018
- * Time: 11:50 AM
+ * Time: 11:50 AM.
  */
 
 namespace NeoSon\Mocean\Tests;
@@ -14,15 +14,15 @@ class TestApi extends AbstractTesting
     {
         parent::getEnvironmentSetUp($app);
         $app['config']->set('mocean.mocean.accounts.main', [
-            'MOCEAN_API_KEY' => 'test_api_key',
+            'MOCEAN_API_KEY'    => 'test_api_key',
             'MOCEAN_API_SECRET' => 'test_api_secret',
-            'MOCEAN_FROM' => 'test_from',
+            'MOCEAN_FROM'       => 'test_from',
         ]);
 
         $app['config']->set('mocean.mocean.accounts.backup', [
-            'MOCEAN_API_KEY' => 'test_backup_api_key',
+            'MOCEAN_API_KEY'    => 'test_backup_api_key',
             'MOCEAN_API_SECRET' => 'test_backup_api_secret',
-            'MOCEAN_FROM' => 'test_backup_from',
+            'MOCEAN_FROM'       => 'test_backup_from',
         ]);
     }
 

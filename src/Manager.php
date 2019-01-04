@@ -18,7 +18,7 @@ class Manager
 
     /**
      * @param string $default
-     * @param array $settings
+     * @param array  $settings
      */
     public function __construct($default, array $settings)
     {
@@ -64,7 +64,7 @@ class Manager
 
     /**
      * @param string $method
-     * @param array $arguments
+     * @param array  $arguments
      *
      * @return mixed
      */

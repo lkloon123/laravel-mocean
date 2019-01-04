@@ -14,10 +14,10 @@ class MoceanServiceProvider extends LaravelServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../config/config.php' => config_path('mocean.php'),
+            __DIR__.'/../config/config.php' => config_path('mocean.php'),
         ], 'config');
 
-        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'mocean');
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'mocean');
     }
 
     public function register()
