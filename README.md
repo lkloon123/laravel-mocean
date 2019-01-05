@@ -45,12 +45,12 @@ Creating a Mocean object
 $mocean = app('mocean');
 
 //custom setting
-$mocean = new NeoSon\Mocean\Mocean($apiKey, $apiSecret, $from);
+$mocean = new NeoSon\Mocean\Mocean($apiKey, $apiSecret);
 ```
 
 Send a text message
 ```php
-$mocean->message('60123456789', 'Simple Text');
+$mocean->message('NeoSon', '60123456789', 'Simple Text');
 ```
 
 Get the configured [Mocean SDK](https://github.com/MoceanAPI/mocean-sdk-php) Object
@@ -60,8 +60,22 @@ $sdk = $mocean->getMocean();
 
 If you have multiple account defined in config
 ```php
-$mocean->using('second_account')->message('60123456789', 'Simple Text');
-$mocean->using('third_account')->message('60123456789', 'Simple Text');
+$mocean->using('second_account')->message('NeoSon', '60123456789', 'Simple Text');
+$mocean->using('third_account')->message('NeoSon', '60123456789', 'Simple Text');
+```
+
+or use credential programmatically
+```php
+//by \Mocean\Client\Credentials\Basic class
+$mocean->using(
+    new \Mocean\Client\Credentials\Basic('mocean_api_key', 'mocean_api_secret')
+)->message('NeoSon', '60123456789', 'Simple Text');
+
+//by using array
+$mocean->using([
+    'MOCEAN_API_KEY' => 'mocean_api_key',
+    'MOCEAN_API_SECRET' => 'mocean_api_secret'
+])->message('NeoSon', '60123456789', 'Simple Text');
 ```
 
 ### Using Facade
@@ -71,6 +85,10 @@ Facade auto configured using the config file, make sure u publish the config fil
 Include this facade
 ```php
 use Mocean;
+
+Mocean::message(...);
+Mocean::using(...)->message(...);
+Mocean::getMocean();
 ```
 
 then u can statically call all function defined in \NeoSon\Mocean\MoceanInterface.
