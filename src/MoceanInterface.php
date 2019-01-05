@@ -5,17 +5,16 @@ namespace NeoSon\Mocean;
 interface MoceanInterface
 {
     /**
+     * @param $from
      * @param string $to
      * @param string $text
-     * @param array  $params
-     *
-     * @link http://moceanapi.com/docs/#send-sms Documentation
-     *
-     * @throws \Mocean\Client\Exception\Exception
+     * @param array $params
      *
      * @return string
+     * @link http://moceanapi.com/docs/#send-sms Documentation
+     *
      */
-    public function message($to, $message);
+    public function message($from, $to, $text, array $params);
 
     /**
      * Get the configured mocean sdk object.

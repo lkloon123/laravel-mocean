@@ -16,9 +16,9 @@ class TestServiceProvider extends AbstractTesting
     {
         parent::getEnvironmentSetUp($app);
         $app['config']->set('mocean.mocean.accounts.main', [
-            'MOCEAN_API_KEY'    => 'test_api_key',
-            'MOCEAN_API_SECRET' => 'test_api_secret',
-            'MOCEAN_FROM'       => 'test_from',
+            'MOCEAN_API_KEY'     => 'test_api_key',
+            'MOCEAN_API_SECRET'  => 'test_api_secret',
+            'MOCEAN_RESP_FORMAT' => 'json',
         ]);
     }
 

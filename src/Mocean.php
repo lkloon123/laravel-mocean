@@ -20,7 +20,7 @@ class Mocean implements MoceanInterface
     /**
      * @var string
      */
-    protected $from;
+    protected $responseFormat;
 
     /**
      * @var \Mocean\Client
@@ -30,19 +30,19 @@ class Mocean implements MoceanInterface
     /**
      * @param string $apiKey
      * @param string $apiSecret
-     * @param string $from
+     * @param string $responseFormat
      */
-    public function __construct($apiKey, $apiSecret, $from)
+    public function __construct($apiKey, $apiSecret, $responseFormat = 'xml')
     {
         $this->apiKey = $apiKey;
         $this->apiSecret = $apiSecret;
-        $this->from = $from;
+        $this->responseFormat = $responseFormat;
     }
 
     /**
      * @param string $to
      * @param string $text
-     * @param array  $params
+     * @param array $params
      *
      * @link http://moceanapi.com/docs/#send-sms Documentation
      *
@@ -50,14 +50,14 @@ class Mocean implements MoceanInterface
      *
      * @return string
      */
-    public function message($to, $text, array $params = [])
+    public function message($from, $to, $text, array $params = [])
     {
         $params['mocean-to'] = $to;
         $params['mocean-text'] = $text;
-        $params['mocean-resp-format'] = 'json';
+        $params['mocean-from'] = $from;
 
-        if (!isset($params['mocean-from'])) {
-            $params['mocean-from'] = $this->from;
+        if (!isset($params['mocean-resp-format'])) {
+            $params['mocean-resp-format'] = $this->responseFormat;
         }
 
         return $this->getMocean()->message()->send($params);
