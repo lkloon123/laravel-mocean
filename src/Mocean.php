@@ -42,7 +42,7 @@ class Mocean implements MoceanInterface
     /**
      * @param string $to
      * @param string $text
-     * @param array $params
+     * @param array  $params
      *
      * @link http://moceanapi.com/docs/#send-sms Documentation
      *
