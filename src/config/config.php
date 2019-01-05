@@ -43,16 +43,17 @@ return [
 
                 /*
                 |--------------------------------------------------------------------------
-                | From
+                | Mocan Response Format
                 |--------------------------------------------------------------------------
                 |
-                | SMS Sender ID (also referred as to SMS Sender Name) is the information that
-                | is displayed to the recipient as the sender of the SMS when a message is
-                | received at a mobile device.
+                | Response format. By default, response format will be returned in XML.
+                | Supported formats are:
+                | * XML
+                | * JSON
                 |
                 */
 
-                'MOCEAN_FROM' => getenv('MOCEAN_FROM') ?: '',
+                'MOCEAN_RESP_FORMAT' => getenv('MOCEAN_RESP_FORMAT') ?: '',
             ],
         ],
     ],
