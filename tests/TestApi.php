@@ -62,8 +62,8 @@ class TestApi extends AbstractTesting
     {
         $mocean = app('mocean');
         $crendentials = [
-            'MOCEAN_API_KEY' => 'test_array_key',
-            'MOCEAN_API_SECRET' => 'test_array_secret'
+            'MOCEAN_API_KEY'    => 'test_array_key',
+            'MOCEAN_API_SECRET' => 'test_array_secret',
         ];
 
         $crendentialObject = $this->getClass(\Mocean\Client::class, 'credentials', $mocean->using($crendentials)->getMocean());

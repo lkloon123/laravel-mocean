@@ -19,7 +19,7 @@ class Manager
 
     /**
      * @param string $default
-     * @param array $settings
+     * @param array  $settings
      */
     public function __construct($default, array $settings)
     {
@@ -36,9 +36,9 @@ class Manager
     {
         if (is_array($account)) {
             $settings = $account;
-        } else if ($account instanceof Basic) {
+        } elseif ($account instanceof Basic) {
             $settings = [
-                'MOCEAN_API_KEY' => $account['mocean-api-key'],
+                'MOCEAN_API_KEY'    => $account['mocean-api-key'],
                 'MOCEAN_API_SECRET' => $account['mocean-api-secret'],
             ];
         } else {
@@ -74,7 +74,7 @@ class Manager
 
     /**
      * @param string $method
-     * @param array $arguments
+     * @param array  $arguments
      *
      * @return mixed
      */
