@@ -14,7 +14,7 @@ interface MoceanInterface
      *
      * @link http://moceanapi.com/docs/#send-sms Documentation
      */
-    public function message($from, $to, $text, array $params);
+    public function message($from, $to, $text, array $params = []);
 
     /**
      * Get the configured mocean sdk object.
