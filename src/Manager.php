@@ -5,6 +5,10 @@ namespace NeoSon\Mocean;
 use InvalidArgumentException;
 use Mocean\Client\Credentials\Basic;
 
+/**
+ * @method string message(string $from, string $to, string $text, array $param = [])
+ * @method \Mocean\Client getMocean()
+ */
 class Manager
 {
     /**
